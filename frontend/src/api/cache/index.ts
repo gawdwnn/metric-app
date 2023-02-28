@@ -1,0 +1,1 @@
+export {metricsVar} from './metricsCache';
