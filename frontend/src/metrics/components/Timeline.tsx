@@ -15,11 +15,13 @@ const TimelineComp: React.FC<Props> = () => {
 
   return (
     <Timeline>
-      {data?.map((d:any) => (
-        <Timeline.Item>
-          <Text>{d.name}</Text> <Text>{d.value}</Text> <Text>{(d.timestamp)}</Text>
-        </Timeline.Item>
-      ))}
+      {data?.map(({name, value, timestamp}) => {
+        return (
+          <Timeline.Item>
+            <Text>{name}</Text> <Text>{value}</Text> <Text>{timestamp}</Text>
+          </Timeline.Item>
+        );
+      })}
     </Timeline>
   );
 };

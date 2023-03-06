@@ -12,7 +12,7 @@ type Metric {
   createdAt: DateTime!
   id: String!
   name: String!
-  timestamp: String!
+  timestamp: DateTime!
   updatedAt: DateTime!
   value: String!
 }
@@ -21,7 +21,7 @@ type MetricOutput {
   createdAt: DateTime!
   id: String!
   name: String!
-  timestamp: String!
+  timestamp: DateTime!
   updatedAt: DateTime!
   value: String!
 }
@@ -32,7 +32,7 @@ type Mutation {
 
 input PostMetricInput {
   name: String!
-  timestamp: String!
+  timestamp: DateTime!
   value: String!
 }
 

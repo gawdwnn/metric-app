@@ -16,7 +16,7 @@ export class PostMetricInput {
   @IsString()
   value: string
 
-  @Field(() => String)
+  @Field(() => Date)
   @IsDateString()
   timestamp: Date
 }

@@ -22,7 +22,7 @@ export default class Metric {
   @Column()
   value: string;
 
-  @Field(() => String)
+  @Field(() => Date)
   @Column()
   timestamp: Date;
 

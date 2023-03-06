@@ -1,6 +1,6 @@
-import { gql } from "@apollo/client";
+import { graphql } from "../gql";
 
-export const POST_METRICS = gql`
+export const POST_METRICS = graphql(`
   mutation PostMetric($input: PostMetricInput!) {
     postMetric(input: $input) {
       id
@@ -9,4 +9,4 @@ export const POST_METRICS = gql`
       timestamp
     }
   }
-`;
+`)

@@ -18,7 +18,6 @@ const PostMetric: React.FC<Props> = ({ isModalOpen, toggleModal }) => {
     if (response.errorFields) {
       return;
     }
-    console.log(response);
     await postMetric({
       variables: {
         input: response,

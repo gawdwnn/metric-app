@@ -1,6 +1,6 @@
-import { gql } from "@apollo/client";
+import { graphql } from "../gql";
 
-export const FETCH_METRICS = gql`
+export const FETCH_METRICS = graphql(`
   query Metrics {
     metrics {
       createdAt
@@ -10,4 +10,4 @@ export const FETCH_METRICS = gql`
       value
     }
   }
-`;
+`)
