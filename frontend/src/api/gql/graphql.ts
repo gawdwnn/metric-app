@@ -20,9 +20,12 @@ export type Metric = {
   __typename?: 'Metric';
   createdAt: Scalars['DateTime'];
   id: Scalars['String'];
+  /** Meric name */
   name: Scalars['String'];
+  /** Meric timestamp */
   timestamp: Scalars['DateTime'];
   updatedAt: Scalars['DateTime'];
+  /** Meric value */
   value: Scalars['String'];
 };
 
@@ -30,14 +33,18 @@ export type MetricOutput = {
   __typename?: 'MetricOutput';
   createdAt: Scalars['DateTime'];
   id: Scalars['String'];
+  /** Meric name */
   name: Scalars['String'];
+  /** Meric timestamp */
   timestamp: Scalars['DateTime'];
   updatedAt: Scalars['DateTime'];
+  /** Meric value */
   value: Scalars['String'];
 };
 
 export type Mutation = {
   __typename?: 'Mutation';
+  /** Post metrics */
   postMetric: MetricOutput;
 };
 
@@ -54,6 +61,7 @@ export type PostMetricInput = {
 
 export type Query = {
   __typename?: 'Query';
+  /** Fetch all metrics */
   metrics: Array<MetricOutput>;
 };
 

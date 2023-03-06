@@ -14,15 +14,15 @@ export default class Metric {
   @PrimaryGeneratedColumn('uuid')
   readonly id: string;
 
-  @Field(() => String)
+  @Field(() => String, {description: 'Meric name'})
   @Column()
   name: string;
 
-  @Field(() => String)
+  @Field(() => String, {description: 'Meric value'})
   @Column()
   value: string;
 
-  @Field(() => Date)
+  @Field(() => Date, {description: 'Meric timestamp'})
   @Column()
   timestamp: Date;
 

@@ -11,22 +11,35 @@ scalar DateTime
 type Metric {
   createdAt: DateTime!
   id: String!
+
+  """Meric name"""
   name: String!
+
+  """Meric timestamp"""
   timestamp: DateTime!
   updatedAt: DateTime!
+
+  """Meric value"""
   value: String!
 }
 
 type MetricOutput {
   createdAt: DateTime!
   id: String!
+
+  """Meric name"""
   name: String!
+
+  """Meric timestamp"""
   timestamp: DateTime!
   updatedAt: DateTime!
+
+  """Meric value"""
   value: String!
 }
 
 type Mutation {
+  """Post metrics"""
   postMetric(input: PostMetricInput!): MetricOutput!
 }
 
@@ -37,5 +50,6 @@ input PostMetricInput {
 }
 
 type Query {
+  """Fetch all metrics"""
   metrics: [MetricOutput!]!
 }

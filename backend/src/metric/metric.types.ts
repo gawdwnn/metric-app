@@ -1,5 +1,5 @@
 import { Field, InputType, ObjectType } from "type-graphql";
-import { IsDateString, IsString } from "class-validator";
+import { IsDate, IsString } from "class-validator";
 import Metric from "./metric.entity";
 
 
@@ -17,6 +17,6 @@ export class PostMetricInput {
   value: string
 
   @Field(() => Date)
-  @IsDateString()
+  @IsDate()
   timestamp: Date
 }
